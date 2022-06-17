@@ -26,8 +26,12 @@ def main():
 
     training_data = ...
 
-    train_dataloader = DataLoader(training_data, batch_size=64)
+    dataloader = DataLoader(training_data, batch_size=64)
     # test_dataloader = DataLoader(test_data, batch_size=64)
+
+    optimizer = torch.optim.Adam(lr=0.001, params=model.parameters())
+
+    loss_fn = torch.nn.MSELoss()
 
     size = len(dataloader.dataset)
     for batch, (X, y) in enumerate(dataloader):
@@ -43,7 +47,6 @@ def main():
         if batch % 100 == 0:
             loss, current = loss.item(), batch * len(X)
             print(f"loss: {loss:>7f}  [{current:>5d}/{size:>5d}]")
-
 
 
 if __name__ == '__main__':
