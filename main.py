@@ -5,7 +5,6 @@ import os
 import pandas as pd
 import numpy as np
 from matplotlib import pyplot as plt
-from sklearn.preprocessing import StandardScaler
 
 from tqdm import tqdm
 
@@ -13,8 +12,7 @@ from tqdm import tqdm
 class NeuralNetwork(nn.Module):
     def __init__(self, input_size, output_size, hidden_layer_size):
         super(NeuralNetwork, self).__init__()
-        self.flatten = nn.Flatten()
-        self.linear_relu_stack = nn.Sequential(
+        self.layers = nn.Sequential(
             nn.Linear(input_size, hidden_layer_size),
             nn.Sigmoid(),
             nn.Linear(hidden_layer_size, hidden_layer_size),
@@ -24,8 +22,8 @@ class NeuralNetwork(nn.Module):
         )
 
     def forward(self, x):
-        y_hat = self.linear_relu_stack(x)
-        assert (y_hat >= 0.).any()
+        y_hat = self.layers(x)
+        # assert (y_hat >= 0.).any()
         return y_hat
 
 
@@ -172,7 +170,6 @@ def main():
     ax.set_title(f"Loss")
     ax.plot(hist_loss)
     plt.savefig(f"fig/hist_loss.pdf")
-
 
 
 if __name__ == '__main__':
