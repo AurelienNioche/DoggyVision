@@ -98,9 +98,7 @@ def main():
     df_labels = pd.read_csv("data/video_labels_05072022.csv")
     label_categories = df_labels.columns.to_list()[1:]
 
-
-
-    torch.manual_seed(123)
+    # torch.manual_seed(12)
 
     for cat_index, cat in enumerate(label_categories):
         print(cat)
@@ -118,7 +116,7 @@ def main():
 
         model = Model(input_size=len(data.X[0]), output_size=1)
 
-        dataloader = DataLoader(training_data, batch_size=64)
+        dataloader = DataLoader(training_data, batch_size=len(training_data))
         val_dataloader = DataLoader(val_data, batch_size=len(val_data))
 
         loss_fn = torch.nn.MSELoss()
