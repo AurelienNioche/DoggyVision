@@ -127,7 +127,11 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-/fig/
 
+# Pycharm
 .idea/
+
+# Data and figures
+/fig/
 /traces/
+/data/new_data.csv
