@@ -1,0 +1,24 @@
+﻿video,camera_movement,content_movement,color,content_type
+Abstract,fast,fast,changing,abstract
+Angel Falls,slow,slow,changing,nature
+Bavarian Alps,still,fast,static,nature
+Barcelona,cut,medium,changing,city
+Beach,slow,slow,static,nature
+Black Hole,slow,slow,static,abstract
+Blue Whale,still,fast,static,animal
+Dog POV,fast,fast,changing,animal
+Dog Shelter,cut,medium,changing,animal
+Dog Sled,slow,fast,static,animal
+Dolphins Playing,slow,medium,static,water
+Dreams of Dali,fast,slow,static,abstract
+Dubai Sky,fast,slow,static,sky
+Sky,slow,fast,changing,sky
+Lions,cut,slow,changing,animal
+London Park,medium,medium,static,nature
+Nature,cut,slow,changing,nature
+NYC,fast,fast,changing,city
+Rhinos,still,medium,static,animal
+Sea,medium,medium,static,water
+Shower Falls,still,fast,static,nature
+Temple,slow,medium,changing,nature
+Men on a Boat,medium,medium,changing,water
